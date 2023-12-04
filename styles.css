@@ -30,6 +30,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  position: relative;
 }
 
 nav {
@@ -85,7 +86,6 @@ nav {
 
 .nav-button:hover {
   transform: scale(1.1);
-  /* transition: all 0.3 ease 0s; */
 }
 
 .section1-heading {
@@ -101,6 +101,9 @@ nav {
 .arrow {
   display: block;
   margin: auto;
+  position: absolute;
+  left: 50%;
+  top: 45%;
 }
 
 /*Section 2*/
@@ -110,19 +113,23 @@ nav {
 
 .row {
   display: flex;
-  height: 600px;
 }
 
 .box {
-  min-width: 720px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  flex: 1;
+}
+
+.image-box img {
+  width: 100%;
+  height: auto;
+  flex: 1.1;
 }
 
 .text-box {
-  padding: 7% 9%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .text-box h2 {
@@ -130,6 +137,9 @@ nav {
   color: var(--very-dark-desaturated-blue);
   margin-bottom: 7%;
   margin-right: auto;
+  box-sizing: border-box;
+  padding-left: 15%;
+  padding-right: 40%;
 }
 
 .text-box p {
@@ -137,10 +147,12 @@ nav {
   line-height: 2rem;
   font-size: 18px;
   margin-bottom: 7%;
+  box-sizing: border-box;
+  padding-left: 15%;
+  padding-right: 40%;
 }
 
 .text-box a {
-  /* border-style: none; */
   text-transform: uppercase;
   font-size: 14px;
   font-family: "Fraunces", serif;
@@ -150,17 +162,20 @@ nav {
   border-bottom: var(--yellow);
   z-index: 10;
   cursor: pointer;
+  box-sizing: border-box;
+  padding-left: 15%;
 }
 
 .line {
   height: 3.3%;
-  width: 26%;
+  width: 14%;
   border: none;
   border-radius: 50px;
   margin-right: auto;
   opacity: 0.3;
   z-index: -1;
   margin-top: -9px;
+  margin-left: 14%;
 }
 
 .hr1 {
@@ -183,10 +198,17 @@ nav {
   background-repeat: no-repeat;
 }
 
+.bg-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .img-title {
   color: var(--dark-desaturated-cyan);
   padding-bottom: 7%;
   margin-top: 80%;
+  margin-left: 30%;
   font-size: 27px;
 }
 
@@ -211,7 +233,8 @@ nav {
   text-transform: uppercase;
   color: var(--dark-grayish-blue);
   letter-spacing: 0.3rem;
-  padding: 10% 8% 5% 8%;
+  padding: 7% 8% 5% 8%;
+  font-size: 2rem;
 }
 
 .testimonials {
